@@ -7,7 +7,8 @@ namespace Library
     {
         static void Main(string[] args)
         {
-            Contact dueño = new Contact("");
+            Contact dueño = new Contact("Nicolas");
+            dueño.Phone = "+598095384662";
             // Crear el contacto dueño
 
             Phonebook agenda = new Phonebook(dueño);
@@ -31,14 +32,18 @@ namespace Library
             var text1 = "Hola";
             var text2 = "Hola";            
             
-            Message mensaje1 = new Whatsapp(dueño.Name, "");
-            Message mensaje2 = new Whatsapp(dueño.Name, "");
+            Message mensaje1 = new Whatsapp("+14155238886", dueño.Phone);
+            mensaje1.Text = text1;
+            Message mensaje2 = new Whatsapp("+14155238886", dueño.Phone);
+            mensaje2.Text = text1;
             mensaje1.Send(mensaje1);
             mensaje2.Send(mensaje2);
             // Enviar un WhatsApp a algunos contactos
 
-            Message mensaje3 = new Twitter(dueño.Name, "");
-            Message mensaje4 = new Twitter(dueño.Name, "");
+            Message mensaje3 = new Twitter("809690515", "380889967");
+            mensaje3.Text = text2;
+            Message mensaje4 = new Twitter("809690515", "380889967");
+            mensaje4.Text = text2;
             mensaje3.Send(mensaje3);
             mensaje4.Send(mensaje4);
             // Enviar un MD en Twitter a algunos contactos
