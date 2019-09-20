@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Object;
 
 namespace Library
 {
@@ -14,8 +13,16 @@ namespace Library
             Phonebook agenda = new Phonebook(dueño);
             // Crear la lista de contactos
 
-            string[] nombres = {"contacto1","contacto2", "contacto3", "contacto4"};
-            var lista_contactos = agenda.Search(nombres);
+            var contacto1 = new Contact("contacto1");
+            var contacto2 = new Contact("contacto2");
+            var contacto3 = new Contact("contacto3");
+            var contacto4 = new Contact("contacto4");
+
+            agenda.add(contacto1);
+            agenda.add(contacto2);
+            agenda.add(contacto3);
+            agenda.add(contacto4);
+
             // Agregar contactos a la lista
 
             var to1 = agenda.SearchNumber("contacto1");
