@@ -7,7 +7,7 @@ namespace Library
     {
         static void Main(string[] args)
         {
-            Contact dueño = new Contact("");
+            Contact dueño = new Contact("Nicolas");
             dueño.Phone = "+598095384662";
             // Crear el contacto dueño
 
@@ -40,9 +40,9 @@ namespace Library
             mensaje2.Send(mensaje2);
             // Enviar un WhatsApp a algunos contactos
 
-            Message mensaje3 = new Twitter("809690515", "");
+            Message mensaje3 = new Twitter("809690515", "380889967");
             mensaje3.Text = text2;
-            Message mensaje4 = new Twitter("809690515", "");
+            Message mensaje4 = new Twitter("809690515", "380889967");
             mensaje4.Text = text2;
             mensaje3.Send(mensaje3);
             mensaje4.Send(mensaje4);
