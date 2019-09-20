@@ -8,7 +8,7 @@ namespace Library
         static void Main(string[] args)
         {
             Contact dueño = new Contact("Nicolas");
-            dueño.Phone = "+598095384662";
+            dueño.Phone = "+59895384662";
             // Crear el contacto dueño
 
             Phonebook agenda = new Phonebook(dueño);
