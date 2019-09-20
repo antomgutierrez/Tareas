@@ -4,6 +4,11 @@ namespace Library
 {
     public class Twitter : Message
     {
+        public Twitter(string from, string to) 
+            : base(from, to)
+        {
+        }
+        
         public void Send(Twitter message)
         {
             // to "809690515"

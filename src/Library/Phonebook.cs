@@ -44,5 +44,10 @@ namespace Library
             return resultado;
 
         }
+
+        public void add(Contact contacto)
+        {
+            this.persons.Add(contacto);
+        }
     }
 }

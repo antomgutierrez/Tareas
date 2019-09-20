@@ -13,8 +13,16 @@ namespace Library
             Phonebook agenda = new Phonebook(dueño);
             // Crear la lista de contactos
 
-            string[] nombres = {"contacto1","contacto2", "contacto3", "contacto4"};
-            var lista_contactos = agenda.Search(nombres);
+            var contacto1 = new Contact("contacto1");
+            var contacto2 = new Contact("contacto2");
+            var contacto3 = new Contact("contacto3");
+            var contacto4 = new Contact("contacto4");
+
+            agenda.add(contacto1);
+            agenda.add(contacto2);
+            agenda.add(contacto3);
+            agenda.add(contacto4);
+
             // Agregar contactos a la lista
 
             var to1 = agenda.SearchNumber("contacto1");
@@ -23,14 +31,14 @@ namespace Library
             var text1 = "Hola";
             var text2 = "Hola";            
             
-            Whatsapp mensaje1 = Message.CreateMessage(dueño.Name, "", text1);
-            Whatsapp mensaje2 = Message.CreateMessage(dueño.Name, "", text1);
+            Message mensaje1 = new Whatsapp(dueño.Name, "");
+            Message mensaje2 = new Whatsapp(dueño.Name, "");
             mensaje1.Send(mensaje1);
             mensaje2.Send(mensaje2);
             // Enviar un WhatsApp a algunos contactos
 
-            Twitter mensaje3 = Message.CreateMessage(dueño.Name, "", text2);
-            Twitter mensaje4 = Message.CreateMessage(dueño.Name, "", text2);
+            Message mensaje3 = new Twitter(dueño.Name, "");
+            Message mensaje4 = new Twitter(dueño.Name, "");
             mensaje3.Send(mensaje3);
             mensaje4.Send(mensaje4);
             // Enviar un MD en Twitter a algunos contactos

@@ -4,6 +4,10 @@ namespace Library
 {
     public class Whatsapp : Message
     {
+        public Whatsapp(string from, string to) 
+            : base(from, to)
+        {
+        }
         public void Send(Whatsapp message)
         {
             // to "+598<Poné tu teléfono acá>"
